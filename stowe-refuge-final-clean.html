@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)https://stowerefuge.netlify.app/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Guest Guide — Stowe Refuge</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root {
@@ -416,9 +416,9 @@
   .footer span { color: var(--gold-light); font-style: italic; font-family: 'Playfair Display', serif; font-size: 15px; }
 
   /* ── MAP SECTION ── */
-  #map-section { display: none; padding-top: 0 !important; }
+  #map-section { display: none; padding-top: 0 !important; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
   #map-section.active { display: flex; flex-direction: column; }
-  #map-container { width: 100%; height: calc(100vh - 120px); position: relative; }
+  #map-container { width: 100%; height: calc(100vh - 118px); position: relative; }
   #the-map { width: 100%; height: 100%; }
   .map-filters {
     display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
@@ -469,7 +469,7 @@
   .leaflet-control-zoom a { background: var(--brown) !important; color: var(--cream) !important; border-color: rgba(255,255,255,0.15) !important; }
 
   /* ── TRIP PLANNER SECTION ── */
-  #planner-section { display: none; padding-top: 0 !important; }
+  #planner-section { display: none; padding-top: 0 !important; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; background: var(--cream); }
   #planner-section.active { display: block; }
   .planner-wrap { max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; }
   .planner-step { margin-bottom: 26px; }
@@ -534,40 +534,40 @@
 <!-- HERO -->
 <div class="hero">
   <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <rect width="800" height="340" fill="#141E28"></rect>
-    <ellipse cx="200" cy="100" rx="340" ry="80" fill="#1D4D3E" opacity="0.45"></ellipse>
-    <ellipse cx="420" cy="75" rx="300" ry="55" fill="#1A5C48" opacity="0.3"></ellipse>
-    <ellipse cx="600" cy="110" rx="280" ry="65" fill="#2A5C6E" opacity="0.35"></ellipse>
-    <ellipse cx="680" cy="60" rx="200" ry="42" fill="#3D6B5E" opacity="0.25"></ellipse>
-    <ellipse cx="90" cy="115" rx="190" ry="52" fill="#2C5C4E" opacity="0.28"></ellipse>
-    <ellipse cx="310" cy="80" rx="160" ry="22" fill="#4A9E8A" opacity="0.1"></ellipse>
-    <ellipse cx="530" cy="74" rx="190" ry="20" fill="#6ABFAA" opacity="0.08"></ellipse>
-    <circle cx="42" cy="16" r="1" fill="#fff" opacity="0.55"></circle>
-    <circle cx="115" cy="9" r="0.8" fill="#fff" opacity="0.4"></circle>
-    <circle cx="198" cy="24" r="1.1" fill="#fff" opacity="0.5"></circle>
-    <circle cx="318" cy="7" r="0.9" fill="#fff" opacity="0.35"></circle>
-    <circle cx="430" cy="17" r="1" fill="#fff" opacity="0.45"></circle>
-    <circle cx="524" cy="8" r="0.8" fill="#fff" opacity="0.4"></circle>
-    <circle cx="628" cy="21" r="1" fill="#fff" opacity="0.3"></circle>
-    <circle cx="722" cy="11" r="1.1" fill="#fff" opacity="0.5"></circle>
-    <circle cx="776" cy="28" r="0.7" fill="#fff" opacity="0.3"></circle>
-    <circle cx="80" cy="40" r="0.6" fill="#fff" opacity="0.25"></circle>
-    <circle cx="490" cy="34" r="0.7" fill="#fff" opacity="0.28"></circle>
-    <polygon points="0,340 120,130 240,340" fill="#1A2A38" opacity="0.95"></polygon>
-    <polygon points="80,340 270,45 460,340" fill="#162030" opacity="0.92"></polygon>
-    <polygon points="210,340 395,100 580,340" fill="#1E2E3E" opacity="0.88"></polygon>
-    <polygon points="360,340 510,60 660,340" fill="#162030" opacity="0.9"></polygon>
-    <polygon points="500,340 645,105 800,340" fill="#1A2A38" opacity="0.88"></polygon>
-    <polygon points="620,340 760,80 900,340" fill="#1E2E3E" opacity="0.85"></polygon>
-    <line x1="270" y1="45" x2="80" y2="340" stroke="#4A9E8A" stroke-width="0.6" opacity="0.2"></line>
-    <line x1="270" y1="45" x2="460" y2="340" stroke="#4A9E8A" stroke-width="0.6" opacity="0.2"></line>
-    <line x1="510" y1="60" x2="360" y2="340" stroke="#C4A882" stroke-width="0.5" opacity="0.18"></line>
-    <line x1="510" y1="60" x2="660" y2="340" stroke="#C4A882" stroke-width="0.5" opacity="0.18"></line>
-    <polygon points="0,340 80,200 160,340" fill="#223344" opacity="0.75"></polygon>
-    <polygon points="140,340 295,165 450,340" fill="#1E3040" opacity="0.7"></polygon>
-    <polygon points="330,340 472,178 614,340" fill="#223344" opacity="0.68"></polygon>
-    <polygon points="530,340 668,170 806,340" fill="#1E3040" opacity="0.72"></polygon>
-    <path d="M0,318 L12,300 L15,318 L26,290 L29,318 L42,295 L45,318 L58,288 L61,318 L76,294 L79,318 L94,298 L97,318 L112,292 L115,318 L131,296 L134,318 L150,290 L153,318 L170,294 L173,318 L191,298 L194,318 L213,292 L216,318 L236,296 L239,318 L259,290 L262,318 L283,294 L286,318 L308,298 L311,318 L334,292 L337,318 L361,296 L364,318 L389,289 L392,318 L417,294 L420,318 L446,297 L449,318 L476,290 L479,318 L507,295 L510,318 L538,298 L541,318 L570,291 L573,318 L603,296 L606,318 L637,289 L640,318 L672,294 L675,318 L708,298 L711,318 L745,291 L748,318 L781,296 L784,318 L800,298 L800,340 L0,340Z" fill="#0D1820"></path>
+    <rect width="800" height="340" fill="#141E28"/>
+    <ellipse cx="200" cy="100" rx="340" ry="80" fill="#1D4D3E" opacity="0.45"/>
+    <ellipse cx="420" cy="75" rx="300" ry="55" fill="#1A5C48" opacity="0.3"/>
+    <ellipse cx="600" cy="110" rx="280" ry="65" fill="#2A5C6E" opacity="0.35"/>
+    <ellipse cx="680" cy="60" rx="200" ry="42" fill="#3D6B5E" opacity="0.25"/>
+    <ellipse cx="90" cy="115" rx="190" ry="52" fill="#2C5C4E" opacity="0.28"/>
+    <ellipse cx="310" cy="80" rx="160" ry="22" fill="#4A9E8A" opacity="0.1"/>
+    <ellipse cx="530" cy="74" rx="190" ry="20" fill="#6ABFAA" opacity="0.08"/>
+    <circle cx="42" cy="16" r="1" fill="#fff" opacity="0.55"/>
+    <circle cx="115" cy="9" r="0.8" fill="#fff" opacity="0.4"/>
+    <circle cx="198" cy="24" r="1.1" fill="#fff" opacity="0.5"/>
+    <circle cx="318" cy="7" r="0.9" fill="#fff" opacity="0.35"/>
+    <circle cx="430" cy="17" r="1" fill="#fff" opacity="0.45"/>
+    <circle cx="524" cy="8" r="0.8" fill="#fff" opacity="0.4"/>
+    <circle cx="628" cy="21" r="1" fill="#fff" opacity="0.3"/>
+    <circle cx="722" cy="11" r="1.1" fill="#fff" opacity="0.5"/>
+    <circle cx="776" cy="28" r="0.7" fill="#fff" opacity="0.3"/>
+    <circle cx="80" cy="40" r="0.6" fill="#fff" opacity="0.25"/>
+    <circle cx="490" cy="34" r="0.7" fill="#fff" opacity="0.28"/>
+    <polygon points="0,340 120,130 240,340" fill="#1A2A38" opacity="0.95"/>
+    <polygon points="80,340 270,45 460,340" fill="#162030" opacity="0.92"/>
+    <polygon points="210,340 395,100 580,340" fill="#1E2E3E" opacity="0.88"/>
+    <polygon points="360,340 510,60 660,340" fill="#162030" opacity="0.9"/>
+    <polygon points="500,340 645,105 800,340" fill="#1A2A38" opacity="0.88"/>
+    <polygon points="620,340 760,80 900,340" fill="#1E2E3E" opacity="0.85"/>
+    <line x1="270" y1="45" x2="80" y2="340" stroke="#4A9E8A" stroke-width="0.6" opacity="0.2"/>
+    <line x1="270" y1="45" x2="460" y2="340" stroke="#4A9E8A" stroke-width="0.6" opacity="0.2"/>
+    <line x1="510" y1="60" x2="360" y2="340" stroke="#C4A882" stroke-width="0.5" opacity="0.18"/>
+    <line x1="510" y1="60" x2="660" y2="340" stroke="#C4A882" stroke-width="0.5" opacity="0.18"/>
+    <polygon points="0,340 80,200 160,340" fill="#223344" opacity="0.75"/>
+    <polygon points="140,340 295,165 450,340" fill="#1E3040" opacity="0.7"/>
+    <polygon points="330,340 472,178 614,340" fill="#223344" opacity="0.68"/>
+    <polygon points="530,340 668,170 806,340" fill="#1E3040" opacity="0.72"/>
+    <path d="M0,318 L12,300 L15,318 L26,290 L29,318 L42,295 L45,318 L58,288 L61,318 L76,294 L79,318 L94,298 L97,318 L112,292 L115,318 L131,296 L134,318 L150,290 L153,318 L170,294 L173,318 L191,298 L194,318 L213,292 L216,318 L236,296 L239,318 L259,290 L262,318 L283,294 L286,318 L308,298 L311,318 L334,292 L337,318 L361,296 L364,318 L389,289 L392,318 L417,294 L420,318 L446,297 L449,318 L476,290 L479,318 L507,295 L510,318 L538,298 L541,318 L570,291 L573,318 L603,296 L606,318 L637,289 L640,318 L672,294 L675,318 L708,298 L711,318 L745,291 L748,318 L781,296 L784,318 L800,298 L800,340 L0,340Z" fill="#0D1820"/>
   </svg>
   <div class="hero-badge">✦ Welcome to your mountain escape ✦</div>
   <h1>Stowe Refuge</h1>
@@ -578,14 +578,14 @@
 <!-- NAV -->
 <div class="nav-wrap">
   <nav class="nav">
-    <button class="nav-btn" onclick="showSection(&#39;checkin&#39;, this)">Check-in/out</button>
-    <button class="nav-btn" onclick="showSection(&#39;wifi&#39;, this)">WiFi &amp; Tech</button>
-    <button class="nav-btn" onclick="showSection(&#39;amenities&#39;, this)">Amenities</button>
-    <button class="nav-btn" onclick="showSection(&#39;rules&#39;, this)">House Rules</button>
-    <button class="nav-btn" onclick="showSection(&#39;local&#39;, this)">Eats &amp; Activities</button>
-    <button class="nav-btn" onclick="showSection(&#39;emergency&#39;, this)">Emergency</button>
-    <button class="nav-btn active" onclick="showSection(&#39;map-section&#39;, this)">🗺️ Map</button>
-    <button class="nav-btn" onclick="showSection(&#39;planner-section&#39;, this)">🗓️ Trip Planner</button>
+    <button class="nav-btn active" onclick="showSection('checkin', this)">Check-in/out</button>
+    <button class="nav-btn" onclick="showSection('wifi', this)">WiFi & Tech</button>
+    <button class="nav-btn" onclick="showSection('amenities', this)">Amenities</button>
+    <button class="nav-btn" onclick="showSection('rules', this)">House Rules</button>
+    <button class="nav-btn" onclick="showSection('local', this)">Eats & Activities</button>
+    <button class="nav-btn" onclick="showSection('emergency', this)">Emergency</button>
+    <button class="nav-btn" onclick="showSection('map-section', this)">🗺️ Map</button>
+    <button class="nav-btn" onclick="showSection('planner-section', this)">🗓️ Trip Planner</button>
   </nav>
 </div>
 
@@ -593,10 +593,10 @@
 <div class="content">
 
   <!-- CHECK-IN / OUT -->
-  <div id="checkin" class="section">
+  <div id="checkin" class="section active">
     <div class="section-header">
       <div class="section-icon">🗝️</div>
-      <h2 class="section-title">Check-in &amp; Check-out</h2>
+      <h2 class="section-title">Check-in & Check-out</h2>
     </div>
 
     <div class="highlight">
@@ -604,12 +604,12 @@
       <div class="grid-2">
         <div>
           <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;">Check-in</div>
-          <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.6rem;color:var(--brown);font-weight:600;">3:00 PM</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--brown);font-weight:600;">3:00 PM</div>
           <div style="font-size:12px;color:var(--text-light);margin-top:2px;">…but you're probably already here 😄</div>
         </div>
         <div>
           <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;">Check-out</div>
-          <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.6rem;color:var(--brown);font-weight:600;">11:00 AM</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--brown);font-weight:600;">11:00 AM</div>
         </div>
       </div>
     </div>
@@ -656,12 +656,12 @@
   <div id="wifi" class="section">
     <div class="section-header">
       <div class="section-icon">📶</div>
-      <h2 class="section-title">WiFi &amp; Tech</h2>
+      <h2 class="section-title">WiFi & Tech</h2>
     </div>
 
     <div class="wifi-box">
       <div class="card-label label">Internet Access</div>
-      <h3>Connect &amp; Settle In</h3>
+      <h3>Connect & Settle In</h3>
       <div class="wifi-row">
         <span class="wifi-key">Network</span>
         <span class="wifi-val">Stowe Refuge</span>
@@ -692,7 +692,7 @@
         <p>One thermostat is <strong>to the left of the shelving</strong> (with your back to the large TV). A second is <strong>upstairs on the right</strong> at the end of the hallway before the larger bedroom.</p>
       </div>
       <div class="card">
-        <div class="card-label">Lights &amp; Lamps</div>
+        <div class="card-label">Lights & Lamps</div>
         <h3>Good to Know</h3>
         <p><strong>Tap the base</strong> of the small black lamps to turn them on. Note that not all light switches control overhead lights — some may appear to not work.</p>
       </div>
@@ -700,7 +700,7 @@
 
     <div class="card">
       <div class="card-label">Entertainment</div>
-      <h3>Record Player, Games &amp; Speakers</h3>
+      <h3>Record Player, Games & Speakers</h3>
       <p>The record player, board games, books, and speakers are all yours to enjoy! Please put all game pieces back when you're done — Battleship has a lot of little pieces, so be careful when you open it.</p>
     </div>
   </div>
@@ -722,7 +722,7 @@
         <h3>Stay Active</h3>
         <ul>
           <li><strong>Treadmill</strong> — always use the safety clip (must be magnetically connected to start)</li>
-          <li><strong>Yoga mat &amp; weights</strong> available for your use</li>
+          <li><strong>Yoga mat & weights</strong> available for your use</li>
         </ul>
       </div>
       <div class="card">
@@ -749,9 +749,9 @@
       <div class="card-label">Supplies</div>
       <h3>Where Things Are</h3>
       <ul class="checklist">
-        <li><span class="check-icon">✓</span> Vacuum, broom &amp; cleaning supplies — front hall closet on the left as you walk in</li>
-        <li><span class="check-icon">✓</span> Extra towels, pillows &amp; linens — small closet next to the upstairs bathroom</li>
-        <li><span class="check-icon">✓</span> Boot trays next to the white hall tree — please keep shoes &amp; boots in the entryway</li>
+        <li><span class="check-icon">✓</span> Vacuum, broom & cleaning supplies — front hall closet on the left as you walk in</li>
+        <li><span class="check-icon">✓</span> Extra towels, pillows & linens — small closet next to the upstairs bathroom</li>
+        <li><span class="check-icon">✓</span> Boot trays next to the white hall tree — please keep shoes & boots in the entryway</li>
       </ul>
     </div>
   </div>
@@ -803,7 +803,7 @@
   <div id="local" class="section">
     <div class="section-header">
       <div class="section-icon">🗺️</div>
-      <h2 class="section-title">Eats &amp; Activities</h2>
+      <h2 class="section-title">Eats & Activities</h2>
     </div>
 
     <div class="card">
@@ -1054,20 +1054,20 @@
   </div>
 
   <!-- MAP SECTION -->
-  <div id="map-section" class="section active">
+  <div id="map-section" class="section">
     <div class="map-filters">
-      <button class="map-filter-pill active" data-cat="all" onclick="mapFilter(&#39;all&#39;,this)">All</button>
-      <button class="map-filter-pill" data-cat="breakfast" onclick="mapFilter(&#39;breakfast&#39;,this)">☕ Breakfast</button>
-      <button class="map-filter-pill" data-cat="lunch" onclick="mapFilter(&#39;lunch&#39;,this)">🥙 Lunch</button>
-      <button class="map-filter-pill" data-cat="dinner" onclick="mapFilter(&#39;dinner&#39;,this)">🍽️ Dinner</button>
-      <button class="map-filter-pill" data-cat="bars" onclick="mapFilter(&#39;bars&#39;,this)">🍹 Bars</button>
-      <button class="map-filter-pill" data-cat="winter" onclick="mapFilter(&#39;winter&#39;,this)">⛷️ Winter</button>
-      <button class="map-filter-pill" data-cat="summer" onclick="mapFilter(&#39;summer&#39;,this)">☀️ Summer</button>
-      <button class="map-filter-pill" data-cat="rainy" onclick="mapFilter(&#39;rainy&#39;,this)">🌧️ Rainy Day</button>
-      <button class="map-filter-pill" data-cat="gems" onclick="mapFilter(&#39;gems&#39;,this)">💎 Hidden Gems</button>
+      <button class="map-filter-pill active" data-cat="all" onclick="mapFilter('all',this)">All</button>
+      <button class="map-filter-pill" data-cat="breakfast" onclick="mapFilter('breakfast',this)">☕ Breakfast</button>
+      <button class="map-filter-pill" data-cat="lunch" onclick="mapFilter('lunch',this)">🥙 Lunch</button>
+      <button class="map-filter-pill" data-cat="dinner" onclick="mapFilter('dinner',this)">🍽️ Dinner</button>
+      <button class="map-filter-pill" data-cat="bars" onclick="mapFilter('bars',this)">🍹 Bars</button>
+      <button class="map-filter-pill" data-cat="winter" onclick="mapFilter('winter',this)">⛷️ Winter</button>
+      <button class="map-filter-pill" data-cat="summer" onclick="mapFilter('summer',this)">☀️ Summer</button>
+      <button class="map-filter-pill" data-cat="rainy" onclick="mapFilter('rainy',this)">🌧️ Rainy Day</button>
+      <button class="map-filter-pill" data-cat="gems" onclick="mapFilter('gems',this)">💎 Hidden Gems</button>
     </div>
     <div id="map-container">
-      <div id="the-map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="./Guest Guide — Stowe Refuge_files/5927.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(176px, 161px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5927(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(432px, 161px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5928.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(176px, 417px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5928(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(432px, 417px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5926.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(176px, -95px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5926(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(432px, -95px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5927(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-80px, 161px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5927(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(688px, 161px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5928(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-80px, 417px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5928(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(688px, 417px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5929.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(176px, 673px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5929(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(432px, 673px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5926(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-80px, -95px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5926(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(688px, -95px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5929(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-80px, 673px, 0px); opacity: 1;"><img alt="" src="./Guest Guide — Stowe Refuge_files/5929(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(688px, 673px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -18px; margin-top: -18px; width: 36px; height: 36px; transform: translate3d(410px, 413px, 0px); z-index: 413;"><div class="home-marker">🏠</div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(415px, 403px, 0px); z-index: 403;"><div class="custom-marker" style="background:#E8963A"><span class="micon">☕</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(448px, 423px, 0px); z-index: 423;"><div class="custom-marker" style="background:#E8963A"><span class="micon">☕</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(379px, 384px, 0px); z-index: 384;"><div class="custom-marker" style="background:#E8963A"><span class="micon">☕</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(89px, -185px, 0px); z-index: -185;"><div class="custom-marker" style="background:#E8963A"><span class="micon">☕</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-226px, 28px, 0px); z-index: 28;"><div class="custom-marker" style="background:#E8963A"><span class="micon">☕</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(75px, 243px, 0px); z-index: 243;"><div class="custom-marker" style="background:#E8963A"><span class="micon">☕</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(421px, 439px, 0px); z-index: 439;"><div class="custom-marker" style="background:#5BA88A"><span class="micon">🥙</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(403px, 428px, 0px); z-index: 428;"><div class="custom-marker" style="background:#5BA88A"><span class="micon">🥙</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(462px, 481px, 0px); z-index: 481;"><div class="custom-marker" style="background:#5BA88A"><span class="micon">🥙</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(431px, 411px, 0px); z-index: 411;"><div class="custom-marker" style="background:#5BA88A"><span class="micon">🥙</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(386px, 452px, 0px); z-index: 452;"><div class="custom-marker" style="background:#5BA88A"><span class="micon">🥙</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(441px, 390px, 0px); z-index: 390;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(413px, 434px, 0px); z-index: 434;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(424px, 444px, 0px); z-index: 444;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(392px, 419px, 0px); z-index: 419;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-398px, 2460px, 0px); z-index: 2460;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(215px, -312px, 0px); z-index: -312;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-402px, 2456px, 0px); z-index: 2456;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-391px, 2466px, 0px); z-index: 2466;"><div class="custom-marker" style="background:#C4623A"><span class="micon">🍽️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(406px, 431px, 0px); z-index: 431;"><div class="custom-marker" style="background:#7A6BAE"><span class="micon">🍹</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(429px, 403px, 0px); z-index: 403;"><div class="custom-marker" style="background:#7A6BAE"><span class="micon">🍹</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(33px, -74px, 0px); z-index: -74;"><div class="custom-marker" style="background:#7A6BAE"><span class="micon">🍹</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(389px, 439px, 0px); z-index: 439;"><div class="custom-marker" style="background:#7A6BAE"><span class="micon">🍹</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-692px, -250px, 0px); z-index: -250;"><div class="custom-marker" style="background:#7A6BAE"><span class="micon">🍹</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-668px, -642px, 0px); z-index: -642;"><div class="custom-marker" style="background:#4A8EC4"><span class="micon">⛷️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(75px, 243px, 0px); z-index: 243;"><div class="custom-marker" style="background:#4A8EC4"><span class="micon">⛷️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(2617px, -2524px, 0px); z-index: -2524;"><div class="custom-marker" style="background:#4A8EC4"><span class="micon">⛷️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(357px, 436px, 0px); z-index: 436;"><div class="custom-marker" style="background:#6AAE4A"><span class="micon">☀️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(462px, 481px, 0px); z-index: 481;"><div class="custom-marker" style="background:#6AAE4A"><span class="micon">☀️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(357px, -773px, 0px); z-index: -773;"><div class="custom-marker" style="background:#6AAE4A"><span class="micon">☀️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-1070px, -861px, 0px); z-index: -861;"><div class="custom-marker" style="background:#6AAE4A"><span class="micon">☀️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(1266px, -1035px, 0px); z-index: -1035;"><div class="custom-marker" style="background:#6AAE4A"><span class="micon">☀️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(2501px, -855px, 0px); z-index: -855;"><div class="custom-marker" style="background:#6AAE4A"><span class="micon">☀️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(272px, 384px, 0px); z-index: 384;"><div class="custom-marker" style="background:#8E8E8E"><span class="micon">🌧️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(438px, 207px, 0px); z-index: 207;"><div class="custom-marker" style="background:#8E8E8E"><span class="micon">🌧️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(-5711px, 201px, 0px); z-index: 201;"><div class="custom-marker" style="background:#8E8E8E"><span class="micon">🌧️</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(2631px, -2532px, 0px); z-index: -2532;"><div class="custom-marker" style="background:#C4A82A"><span class="micon">💎</span></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(2510px, -851px, 0px); z-index: -851;"><div class="custom-marker" style="background:#C4A82A"><span class="micon">💎</span></div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="https://stowerefuge.netlify.app/#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="https://stowerefuge.netlify.app/#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a></div></div></div></div>
+      <div id="the-map"></div>
       <div class="map-panel" id="map-panel">
         <div class="map-panel-header">
           <div>
@@ -1111,16 +1111,16 @@
           <span class="planner-step-label">Step 03</span>
           <div class="planner-step-title">What are you into? Pick all that apply.</div>
           <div class="p-chips">
-            <div class="p-chip selected" data-interest="skiing" onclick="this.classList.toggle(&#39;selected&#39;)">⛷️ Skiing</div>
-            <div class="p-chip" data-interest="hiking" onclick="this.classList.toggle(&#39;selected&#39;)">🥾 Hiking</div>
-            <div class="p-chip" data-interest="mountain biking" onclick="this.classList.toggle(&#39;selected&#39;)">🚵 Mountain Biking</div>
-            <div class="p-chip" data-interest="food and restaurants" onclick="this.classList.toggle(&#39;selected&#39;)">🍽️ Food &amp; Restaurants</div>
-            <div class="p-chip" data-interest="bars and nightlife" onclick="this.classList.toggle(&#39;selected&#39;)">🍹 Bars</div>
-            <div class="p-chip" data-interest="breweries" onclick="this.classList.toggle(&#39;selected&#39;)">🍺 Breweries</div>
-            <div class="p-chip" data-interest="relaxing and cozy" onclick="this.classList.toggle(&#39;selected&#39;)">🛋️ Relaxing</div>
-            <div class="p-chip" data-interest="nordic skiing or snowshoeing" onclick="this.classList.toggle(&#39;selected&#39;)">🏃 Nordic / Snowshoe</div>
-            <div class="p-chip" data-interest="exploring local Vermont" onclick="this.classList.toggle(&#39;selected&#39;)">🗺️ Exploring Vermont</div>
-            <div class="p-chip" data-interest="shopping and browsing" onclick="this.classList.toggle(&#39;selected&#39;)">🛍️ Shopping</div>
+            <div class="p-chip selected" data-interest="skiing" onclick="this.classList.toggle('selected')">⛷️ Skiing</div>
+            <div class="p-chip" data-interest="hiking" onclick="this.classList.toggle('selected')">🥾 Hiking</div>
+            <div class="p-chip" data-interest="mountain biking" onclick="this.classList.toggle('selected')">🚵 Mountain Biking</div>
+            <div class="p-chip" data-interest="food and restaurants" onclick="this.classList.toggle('selected')">🍽️ Food & Restaurants</div>
+            <div class="p-chip" data-interest="bars and nightlife" onclick="this.classList.toggle('selected')">🍹 Bars</div>
+            <div class="p-chip" data-interest="breweries" onclick="this.classList.toggle('selected')">🍺 Breweries</div>
+            <div class="p-chip" data-interest="relaxing and cozy" onclick="this.classList.toggle('selected')">🛋️ Relaxing</div>
+            <div class="p-chip" data-interest="nordic skiing or snowshoeing" onclick="this.classList.toggle('selected')">🏃 Nordic / Snowshoe</div>
+            <div class="p-chip" data-interest="exploring local Vermont" onclick="this.classList.toggle('selected')">🗺️ Exploring Vermont</div>
+            <div class="p-chip" data-interest="shopping and browsing" onclick="this.classList.toggle('selected')">🛍️ Shopping</div>
           </div>
         </div>
         <div class="planner-step">
@@ -1136,7 +1136,9 @@
         <div class="planner-step">
           <span class="planner-step-label">Step 05</span>
           <div class="planner-step-title">Anything else Jeff should know?</div>
-          <textarea id="p-notes" placeholder="e.g. celebrating a birthday, first time in Vermont, vegetarian, want to avoid crowds…" style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:12px;font-family:&#39;Lato&#39;,sans-serif;font-size:13.5px;font-weight:300;color:var(--text);background:white;resize:vertical;min-height:76px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor=&#39;var(--terracotta)&#39;" onblur="this.style.borderColor=&#39;var(--border)&#39;"></textarea>
+          <textarea id="p-notes" placeholder="e.g. celebrating a birthday, first time in Vermont, vegetarian, want to avoid crowds…"
+            style="width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:12px;font-family:'Lato',sans-serif;font-size:13.5px;font-weight:300;color:var(--text);background:white;resize:vertical;min-height:76px;outline:none;transition:border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--terracotta)'" onblur="this.style.borderColor='var(--border)'"></textarea>
         </div>
         <button class="p-submit" onclick="pGenerate()">✦ &nbsp; Build My Itinerary</button>
       </div>
@@ -1162,7 +1164,7 @@
 </div>
 <div class="footer">
   <span>Have a wonderful stay ✦</span><br>
-  <span style="font-family:Lato,sans-serif;font-style:normal;font-size:12px;color:rgba(239,246,243,0.35);">From Indy &amp; Jeff — we're so glad you're here.</span>
+  <span style="font-family:Lato,sans-serif;font-style:normal;font-size:12px;color:rgba(239,246,243,0.35);">From Indy & Jeff — we're so glad you're here.</span>
 </div>
 
 <script>
@@ -1174,12 +1176,13 @@
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     btn.classList.add('active');
-    if (id !== 'map-section' && id !== 'planner-section') {
+    window.scrollTo({ top: 0 });
+    if (id === 'map-section') {
+      if (!mapInitialized) { initMap(); mapInitialized = true; }
+      else { setTimeout(() => theMap.invalidateSize(), 100); }
+    } else if (id !== 'planner-section') {
       document.querySelector('.content').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.scrollTo({ top: 0 });
     }
-    if (id === 'map-section' && !mapInitialized) { initMap(); mapInitialized = true; }
   }
 
   // ── MAP ──
@@ -1188,45 +1191,42 @@
   const MCAT_LABELS = { breakfast:'Breakfast', lunch:'Lunch', dinner:'Dinner', bars:'Bars', winter:'Winter Activity', summer:'Summer Activity', rainy:'Rainy Day', gems:'Hidden Gem', home:'Your Home Base' };
 
   const PLACES = [
-    { name:"Stowe Refuge", cat:"home", lat:44.4654, lng:-72.6874, desc:"Your home base for the perfect Vermont mountain escape.", tip:"Jeff lives next door — text (203) 993-4708 if you need anything." },
-    { name:"The Roastery", cat:"breakfast", lat:44.4660, lng:-72.6870, desc:"Hard to beat the convenience (right across the street) and quality. Super small coffee shop — don't expect to sit down, but some of the best coffee in town.", tip:"🏆 Indy's pick for morning coffee. Grab and go!" },
-    { name:"Butler's Pantry", cat:"breakfast", lat:44.4648, lng:-72.6842, desc:"Best sit-down breakfast in Stowe. The biscuit french toast is a must try. Only a minute or two away.", tip:"⚠️ Join the Yelp waitlist before you drive over — it gets crazy busy." },
-    { name:"Woodland Cafe", cat:"breakfast", lat:44.4672, lng:-72.6901, desc:"The local's coffee stop. Not as good coffee as The Roastery (don't say I said that) but an impressive pastry selection and decent seating.", tip:"Great spot to linger over a pastry." },
-    { name:"Round Hearth", cat:"breakfast", lat:44.5020, lng:-72.7150, desc:"One of my favorite ski routines — take a run or two and sit around the indoor fire pit drinking bottomless coffee.", tip:"🔥 Best enjoyed after an early morning ski run." },
-    { name:"Cold Hollow Cider Mill", cat:"breakfast", lat:44.4890, lng:-72.7420, desc:"Can't leave without stopping for cider, donuts and a creemee. For breakfast always get the egg sandwich on a cheddar biscuit with maple mayo or cider jam. About 15 minutes away.", tip:"🍩 Also great for a rainy day — cider tasting room on site." },
-    { name:"Trapp Family Lodge — Kaffehaus", cat:"breakfast", lat:44.4758, lng:-72.7162, desc:"Skip their big breakfast buffet and opt for the Kaffehaus. Great place to sit outside in the summer.", tip:"Beautiful grounds worth the short drive." },
-    { name:"Piecasso", cat:"lunch", lat:44.4638, lng:-72.6865, desc:"I almost exclusively go here for the slice special — 2 slices and a soda for $8.50. Quick, cheap way to fuel up and keep moving.", tip:"💰 Best value lunch in Stowe, full stop." },
-    { name:"Aladdin", cat:"lunch", lat:44.4645, lng:-72.6880, desc:"Honestly some of the best falafel I've had outside of the Middle East. Only open for lunch and sometimes they look closed when they're open.", tip:"⚠️ Lunch only. Push the door — they're probably open." },
-    { name:"Ranch Camp", cat:"lunch", lat:44.4612, lng:-72.6830, desc:"Great vibes, bowls, and burritos. I always get the crunchwrap. Bike shop on site, right next to Cady Hill trails.", tip:"🚵 Great combo: lunch + rent a bike + ride Cady Hill." },
-    { name:"Avocado Pit", cat:"lunch", lat:44.4655, lng:-72.6856, desc:"Quick and easy burrito spot with online ordering and a separate takeout window. A few minutes from home.", tip:"📱 Order online ahead — the takeout window is super fast." },
-    { name:"Green Goddess", cat:"lunch", lat:44.4630, lng:-72.6895, desc:"A little more low key, but great smoothies, salads, and sandwiches.", tip:"Perfect for a lighter lunch." },
-    { name:"Doc Ponds", cat:"dinner", lat:44.4668, lng:-72.6848, desc:"Upscale bar bites that are actually good. Usually a great food and drink special every night.", tip:"📱 Join the Yelp waitlist so you don't have to wait around." },
-    { name:"Bench", cat:"dinner", lat:44.4641, lng:-72.6872, desc:"Wide variety — pizza, great veggie burger, long beer list, and a killer skillet cookie. Shuts off takeout ~6pm.", tip:"🍪 Don't skip the skillet cookie." },
-    { name:"American Flatbread", cat:"dinner", lat:44.4635, lng:-72.6862, desc:"Very inventive pizzas, especially their phenomenal specials. Lots of seating for busy nights.", tip:"Always ask about the specials." },
-    { name:"Shakedown Street", cat:"dinner", lat:44.4650, lng:-72.6890, desc:"Stowe Cider's BBQ restaurant. Fun atmosphere, often live music, great hard cider selection.", tip:"🎸 Check their schedule — live music nights are a lot of fun." },
-    { name:"Salt and Rind", cat:"dinner", lat:44.3399, lng:-72.7568, desc:"Seafood focused restaurant in downtown Waterbury (15-20 mins). Unique cocktails and very lively vibes.", tip:"🦞 Worth the drive for a special night out." },
-    { name:"Edson Hill", cat:"dinner", lat:44.5098, lng:-72.7042, desc:"Stowe's best restaurant in a cozy setting on beautiful grounds. Reservations are pretty much a necessity, but the tavern bar is first come, first served.", tip:"⭐ Special occasion pick. Book ahead or try the tavern." },
-    { name:"Gallus", cat:"dinner", lat:44.3401, lng:-72.7571, desc:"Excellent homemade pastas in an old mill building in Waterbury (~15-20 mins). Great setting on a river with rotating unique pasta shapes.", tip:"⭐ Rotating pasta shapes and sauces — always something new." },
-    { name:"Hen of the Wood", cat:"dinner", lat:44.3395, lng:-72.7562, desc:"One of the better known restaurants in Vermont, right downtown Waterbury. Ever-changing menu, great cocktails, and they usually have a mushroom toast.", tip:"⭐ Get the mushroom toast. Trust me." },
-    { name:"Apres", cat:"bars", lat:44.4643, lng:-72.6878, desc:"Best cocktails in Stowe (not to be confused with apres only).", tip:"🍸 Go here for cocktails. Best in town." },
-    { name:"Burt's", cat:"bars", lat:44.4660, lng:-72.6858, desc:"Best place to see someone who actually lives here.", tip:"The real locals bar." },
-    { name:"Matterhorn", cat:"bars", lat:44.4952, lng:-72.7198, desc:"Best place to see someone who just says they live here.", tip:"Classic Stowe ski bar scene." },
-    { name:"Alfie's", cat:"bars", lat:44.4638, lng:-72.6892, desc:"Best place to accidentally go to a rave.", tip:"You've been warned. 🕺" },
-    { name:"Whistlepig Pavilion at Spruce Peak", cat:"bars", lat:44.5060, lng:-72.7820, desc:"Best upscale apres ski that's actually good.", tip:"⛷️ Head here right off the mountain." },
-    { name:"Stowe Mountain Resort", cat:"winter", lat:44.5300, lng:-72.7800, desc:"Awesome place to ski with something for everyone. Spruce Peak for beginners, Forerunner quad for expert terrain, Gondola for everything in between.", tip:"🚗 Parking $30/day Fri–Sun — take the shuttle from Toll House to avoid it." },
-    { name:"Trapp Family Lodge Nordic Center", cat:"winter", lat:44.4758, lng:-72.7162, desc:"About 10 minutes away with extensive nordic ski trails, lessons, and rentals. There's a rustic cabin a few miles in with hot food and drinks until 3pm.", tip:"🏃 Great for a mellow ski day." },
-    { name:"Craftsbury Outdoor Center", cat:"winter", lat:44.6450, lng:-72.4980, desc:"Non-profit nordic ski and mountain bike facility. Beautiful trail network, flatter than Trapps, not as touristy. Skiing on the lake is really cool if it's open!", tip:"💎 Hidden gem — worth the drive." },
-    { name:"Stowe Recreation Path", cat:"summer", lat:44.4640, lng:-72.6920, desc:"About 5 miles long, paved the whole way, winding through town with shops, restaurants, and bars along the route.", tip:"🚴 Rent bikes at AJ's or Mountain Ops." },
-    { name:"Cady Hill — Mountain Biking", cat:"summer", lat:44.4612, lng:-72.6830, desc:"The most popular flow trails in Vermont, maintained by Stowe Trails Partnership. Ranch Camp has bike rentals you can reserve online.", tip:"🚵 Ask Jeff for trail recommendations — he rides here all the time." },
-    { name:"Moss Glen Falls", cat:"summer", lat:44.5380, lng:-72.6920, desc:"A quick hike to a beautiful waterfall. One of the easiest and most rewarding hikes near Stowe.", tip:"Perfect for a morning hike before lunch in town." },
+    { name:"Stowe Refuge", cat:"home", lat:44.4830, lng:-72.6616, desc:"Your home base for the perfect Vermont mountain escape.", tip:"Jeff lives next door — text (203) 993-4708 if you need anything." },
+    { name:"The Roastery", cat:"breakfast", lat:44.4830, lng:-72.6616, desc:"Hard to beat the convenience (right across the street) and quality. Super small coffee shop — don't expect to sit down, but some of the best coffee in town.", tip:"🏆 Indy's pick for morning coffee. Grab and go!" },
+    { name:"Butler's Pantry", cat:"breakfast", lat:44.4651, lng:-72.6849, desc:"Best sit-down breakfast in Stowe. The biscuit french toast is a must try. Only a minute or two away.", tip:"⚠️ Join the Yelp waitlist before you drive over — it gets crazy busy." },
+    { name:"Woodland Cafe", cat:"breakfast", lat:44.4707, lng:-72.6865, desc:"The local's coffee stop. Not as good coffee as The Roastery (don't say I said that) but an impressive pastry selection and decent seating.", tip:"Great spot to linger over a pastry." },
+    { name:"Round Hearth", cat:"breakfast", lat:44.4893, lng:-72.7294, desc:"One of my favorite ski routines — take a run or two and sit around the indoor fire pit drinking bottomless coffee.", tip:"🔥 Best enjoyed after an early morning ski run." },
+    { name:"Cold Hollow Cider Mill", cat:"breakfast", lat:44.3813, lng:-72.7200, desc:"Can't leave without stopping for cider, donuts and a creemee. For breakfast always get the egg sandwich on a cheddar biscuit with maple mayo or cider jam. About 15 minutes away.", tip:"🍩 Also great for a rainy day — cider tasting room on site." },
+    { name:"Trapp Family Lodge — Kaffehaus", cat:"breakfast", lat:44.4655, lng:-72.7452, desc:"Skip their big breakfast buffet and opt for the Kaffehaus. Great place to sit outside in the summer.", tip:"Beautiful grounds worth the short drive." },
+    { name:"Piecasso", cat:"lunch", lat:44.4739, lng:-72.7147, desc:"I almost exclusively go here for the slice special — 2 slices and a soda for $8.50. Quick, cheap way to fuel up and keep moving.", tip:"💰 Best value lunch in Stowe, full stop." },
+    { name:"Aladdin", cat:"lunch", lat:44.4747, lng:-72.7145, desc:"Honestly some of the best falafel I've had outside of the Middle East. Only open for lunch and sometimes they look closed when they're open.", tip:"⚠️ Lunch only. Push the door — they're probably open." },
+    { name:"Ranch Camp", cat:"lunch", lat:44.4700, lng:-72.6879, desc:"Great vibes, bowls, and burritos. I always get the crunchwrap. Bike shop on site, right next to Cady Hill trails.", tip:"🚵 Great combo: lunch + rent a bike + ride Cady Hill." },
+    { name:"Avocado Pit", cat:"lunch", lat:44.4650, lng:-72.6853, desc:"Quick and easy burrito spot with online ordering and a separate takeout window. A few minutes from home.", tip:"📱 Order online ahead — the takeout window is super fast." },
+    { name:"Green Goddess", cat:"lunch", lat:44.4584, lng:-72.6941, desc:"A little more low key, but great smoothies, salads, and sandwiches.", tip:"Perfect for a lighter lunch." },
+    { name:"Doc Ponds", cat:"dinner", lat:44.4696, lng:-72.6874, desc:"Upscale bar bites that are actually good. Usually a great food and drink special every night.", tip:"📱 Join the Yelp waitlist so you don't have to wait around." },
+    { name:"Bench", cat:"dinner", lat:44.4720, lng:-72.6881, desc:"Wide variety — pizza, great veggie burger, long beer list, and a killer skillet cookie. Shuts off takeout ~6pm.", tip:"🍪 Don't skip the skillet cookie." },
+    { name:"American Flatbread", cat:"dinner", lat:44.4751, lng:-72.7025, desc:"Very inventive pizzas, especially their phenomenal specials. Lots of seating for busy nights.", tip:"Always ask about the specials." },
+    { name:"Shakedown Street", cat:"dinner", lat:44.4757, lng:-72.7019, desc:"Stowe Cider's BBQ restaurant. Fun atmosphere, often live music, great hard cider selection.", tip:"🎸 Check their schedule — live music nights are a lot of fun." },
+    { name:"Salt and Rind", cat:"dinner", lat:44.3375, lng:-72.7545, desc:"Seafood focused restaurant in downtown Waterbury (15-20 mins). Unique cocktails and very lively vibes.", tip:"🦞 Worth the drive for a special night out." },
+    { name:"Edson Hill", cat:"dinner", lat:44.5110, lng:-72.7346, desc:"Stowe's best restaurant in a cozy setting on beautiful grounds. Reservations are pretty much a necessity, but the tavern bar is first come, first served.", tip:"⭐ Special occasion pick. Book ahead or try the tavern." },
+    { name:"Gallus", cat:"dinner", lat:44.3421, lng:-72.7482, desc:"Excellent homemade pastas in an old mill building in Waterbury (~15-20 mins). Great setting on a river with rotating unique pasta shapes.", tip:"⭐ Rotating pasta shapes and sauces — always something new." },
+    { name:"Hen of the Wood", cat:"dinner", lat:44.3375, lng:-72.7558, desc:"One of the better known restaurants in Vermont, right downtown Waterbury. Ever-changing menu, great cocktails, and they usually have a mushroom toast.", tip:"⭐ Get the mushroom toast. Trust me." },
+    { name:"Apres", cat:"bars", lat:44.4750, lng:-72.7167, desc:"Best cocktails in Stowe (not to be confused with apres only).", tip:"🍸 Go here for cocktails. Best in town." },
+    { name:"Burt's Irish Pub", cat:"bars", lat:44.4763, lng:-72.7187, desc:"Best place to see someone who actually lives here.", tip:"The real locals bar." },
+    { name:"Matterhorn", cat:"bars", lat:44.5019, lng:-72.7559, desc:"Best place to see someone who just says they live here.", tip:"Classic Stowe ski bar scene." },
+    { name:"Alfie's Wild Ride", cat:"bars", lat:44.4739, lng:-72.6969, desc:"Best place to accidentally go to a rave.", tip:"You've been warned. 🕺" },
+    { name:"WhistlePig Pavilion at Spruce Peak", cat:"bars", lat:44.5304, lng:-72.7804, desc:"Best upscale apres ski that's actually good.", tip:"⛷️ Head here right off the mountain." },
+    { name:"Stowe Mountain Resort", cat:"winter", lat:44.5275, lng:-72.7839, desc:"Awesome place to ski with something for everyone. Spruce Peak for beginners, Forerunner quad for expert terrain, Gondola for everything in between.", tip:"🚗 Parking $30/day Fri–Sun — take the shuttle from Toll House to avoid it." },
+    { name:"Trapp Family Lodge Nordic Center", cat:"winter", lat:44.4655, lng:-72.7452, desc:"About 10 minutes away with extensive nordic ski trails, lessons, and rentals. There's a rustic cabin a few miles in with hot food and drinks until 3pm.", tip:"🏃 Great for a mellow ski day." },
+    { name:"Stowe Recreation Path", cat:"summer", lat:44.4786, lng:-72.7240, desc:"About 5 miles long, paved the whole way, winding through town with shops, restaurants, and bars along the route.", tip:"🚴 Rent bikes at AJ's or Mountain Ops." },
+    { name:"Cady Hill — Mountain Biking", cat:"summer", lat:44.4700, lng:-72.6879, desc:"The most popular flow trails in Vermont, maintained by Stowe Trails Partnership. Ranch Camp has bike rentals you can reserve online.", tip:"🚵 Ask Jeff for trail recommendations — he rides here all the time." },
+    { name:"Moss Glen Falls", cat:"summer", lat:44.4820, lng:-72.6240, desc:"A quick hike to a beautiful waterfall. One of the easiest and most rewarding hikes near Stowe.", tip:"Perfect for a morning hike before lunch in town." },
     { name:"Mount Mansfield", cat:"summer", lat:44.5434, lng:-72.8145, desc:"A variety of strenuous trails with great views at the summit. Haselton Trail and Long Trail are both difficult, steep ways to the ridgeline.", tip:"⚠️ Weather at the summit is often completely different from town — bring layers." },
-    { name:"Lamoille Valley Rail Trail", cat:"summer", lat:44.5540, lng:-72.6140, desc:"About 100 miles of gravel trail. Hop on at Oxbow Park in downtown Morrisville — going east toward Hardwick is one of the most beautiful stretches.", tip:"🚴 Pretty flat — great for a relaxed ride of any length." },
-    { name:"Lake Elmore", cat:"summer", lat:44.5430, lng:-72.5080, desc:"Beach in summer, ice skating in winter. The Elmore Store next door was just renovated and has surprisingly good food. Hike Mount Elmore for a 360° view from a fire tower.", tip:"Small fee to enter the state park. Worth every penny." },
-    { name:"Stowe Ski Museum", cat:"rainy", lat:44.4672, lng:-72.6993, desc:"Stowe has more ski history than you ever expected. Only 5 minutes away at Route 100 and Mountain Road.", tip:"Great rainy morning activity — usually not crowded." },
-    { name:"The Alchemist Brewery", cat:"rainy", lat:44.4780, lng:-72.6850, desc:"Home of Heady Topper — one of the most famous craft beers in the world. Right here in Stowe.", tip:"🍺 Also try: Ten Bends (Hyde Park), Foam (Burlington), Four Quarters (Winooski)." },
+    { name:"Vermont Ski & Snowboard Museum", cat:"rainy", lat:44.4652, lng:-72.6878, desc:"Stowe has more ski history than you ever expected. Only 5 minutes away at Route 100 and Mountain Road.", tip:"Great rainy morning activity — usually not crowded." },
+    { name:"The Alchemist Brewery", cat:"rainy", lat:44.4759, lng:-72.7157, desc:"Home of Heady Topper — one of the most famous craft beers in the world. Right here in Stowe.", tip:"🍺 Also try: Ten Bends (Hyde Park), Foam (Burlington), Four Quarters (Winooski)." },
     { name:"Church Street Burlington", cat:"rainy", lat:44.4784, lng:-73.2128, desc:"About 45 minutes away — a pedestrian-only street in the heart of Burlington with great shops and restaurants.", tip:"🏙️ Make a day of it — add Honey Road, May Day, or Spot on the Dock." },
     { name:"Craftsbury Genny + Village Diner", cat:"gems", lat:44.6455, lng:-72.4968, desc:"Classic Vermont general store and a local diner for breakfast. The hashes are the best thing on the menu. You'll get a look when you walk in but it's ok.", tip:"💎 Stop here on the way to the Craftsbury Outdoor Center." },
-    { name:"Elmore Store", cat:"gems", lat:44.5428, lng:-72.5072, desc:"A great old general store that was just renovated with surprisingly good food. Right on Lake Elmore.", tip:"💎 Combine with a hike up Mount Elmore — fire tower views are stunning." },
+    { name:"Lake Elmore / Elmore Store", cat:"gems", lat:44.5428, lng:-72.5072, desc:"A great old general store that was just renovated with surprisingly good food. Beach in summer, ice skating in winter. Hike Mount Elmore for a 360° view from a fire tower.", tip:"💎 Small fee to enter the state park. Worth every penny." },
   ];
 
   let theMap, mapMarkers = [], mapCat = 'all';
@@ -1259,7 +1259,7 @@
   }
 
   function initMap() {
-    theMap = L.map('the-map', { center:[44.4654,-72.6874], zoom:14 });
+    theMap = L.map('the-map', { center:[44.4830,-72.6616], zoom:14 });
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(theMap);
     PLACES.forEach(place => {
       const marker = L.marker([place.lat, place.lng], { icon: makeMIcon(place.cat) }).addTo(theMap);
@@ -1267,7 +1267,7 @@
       mapMarkers.push({ marker, place });
     });
     theMap.on('click', () => closeMapPanel());
-    setTimeout(() => theMap.invalidateSize(), 100);
+    setTimeout(() => { theMap.invalidateSize(); }, 200);
   }
 
   // ── TRIP PLANNER ──
@@ -1362,6 +1362,5 @@ Time slots: Morning, Midday, Afternoon, Evening, Night (3-5 slots per day). Make
   }
 </script>
 
-
-
-</body></html>
+</body>
+</html>
